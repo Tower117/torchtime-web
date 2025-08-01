@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TorchTime – D&amp;D Campaign &amp; Character Manager</title>
+    <!--
+      TorchTime is a lightweight single page application for managing your
+      Dungeons & Dragons campaigns, characters and sessions.  The UI
+      intentionally stays simple and readable, leaving plenty of room for
+      embellishment should you choose to integrate a design framework or
+      your own artwork.  All state is stored in localStorage so your
+      progress persists between sessions.  See app.js for the bulk of
+      the application logic.
+    -->
+    <link rel="stylesheet" href="styles.css" />
+      <!-- Import fantasy-themed fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <!-- Add a torch icon next to the TorchTime title. We use an emoji here to avoid
+           having to bundle external assets.  The icon is wrapped in a span so
+           it can be styled separately via CSS. -->
+      <h1><span class="torch-icon">🔥</span>TorchTime</h1>
+      <!-- Navigation links are injected by app.js based on user state -->
+      <nav id="nav"></nav>
+    </header>
+    <!--
+      Decorative hero image.  The image file retro_art.png should depict
+      a cozy tavern or fantasy scene to set the mood.  You can replace
+      retro_art.png with your own artwork by dropping a file of the same
+      name into this folder.  The image is wrapped in a container so it
+      remains responsive across screen sizes.
+    -->
+    <div class="hero-container">
+      <img src="retro_art.png" alt="Retro Dungeons &amp; Dragons scene" class="hero" />
+    </div>
+    <!--
+      Background music.  The audio element is kept outside of the main
+      content so that it can persist across page transitions.  Music
+      playback is controlled via the toggle in the navigation bar.  The
+      provided tavern.wav is a short sine‑wave placeholder; replace it
+      with a proper fantasy tavern track (e.g. CC0 or Creative Commons)
+      by dropping a file named tavern.wav or tavern.mp3 into this
+      directory.  The player is hidden; play/pause is handled by
+      JavaScript.
+    -->
+    <audio id="bg-music" loop>
+      <source src="tavern.wav" type="audio/wav" />
+      <!-- fallback: you can also provide an mp3 version if needed -->
+      <!-- <source src="tavern.mp3" type="audio/mpeg" /> -->
+    </audio>
+    <main id="app">
+      <!-- Dynamic views are rendered here by app.js -->
+    </main>
+    <footer>
+      <p>
+        &copy; <span id="year"></span> TorchTime. Built for demonstration
+        purposes only.
+      </p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

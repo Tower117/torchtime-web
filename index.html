@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TorchTime – D&D Scheduling & Companion</title>
+  <!--
+    A simple, self‑contained web application for managing Dungeons & Dragons
+    campaigns. This prototype demonstrates how core scheduling and campaign
+    management features might work without relying on any external
+    frameworks or services. All data is stored in your browser via
+    localStorage. In a production setup you would replace the storage
+    layer with a database and authentication provider such as Firebase or
+    Supabase. See app.js for more details.
+  -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>TorchTime</h1>
+    <nav id="nav"></nav>
+  </header>
+  <main id="app">
+    <!-- Dynamic content is injected here by app.js -->
+  </main>
+  <footer>
+    <p>
+      &copy; <span id="year"></span> TorchTime. All rights reserved. Built for
+      demonstration purposes only.
+    </p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
